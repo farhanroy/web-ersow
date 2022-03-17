@@ -1,109 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="manifest" href="./manifest.json">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
- 
-    <title>ERSOW - EEPIS Robot Soccer On Wheeled</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://unpkg.com/[email protected]/dist/flowbite.min.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <link rel="manifest" href="./manifest.json">
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+   <title>ERSOW - EEPIS Robot Soccer On Wheeled</title>
 </head>
+
 <body>
-    <header class="text-gray-700 body-font border-b border-gray-200">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/" target="_blank">
-              <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-black text-slate-500">
-                 <img src="logo.png" alt="" width="40" height="40">
-              </div>
-  
-              <span class="ml-3 text-xl">ERSOW</span>
-           </a>
-           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-              <div class="flex justify-center">
-                 <div>
-                    <div class="dropdown relative">
-                       <button class="
-                         dropdown-toggle
-                         px-6
-                         py-2.5
-                         text-black
-                         
-                         leading-tight
-  
-                         rounded
-                         focus:bg-blue-700
-                         active:bg-blue-800 
-                         transition
-                         duration-150
-                         ease-in-out
-                         flex
-                         items-center
-                         whitespace-nowrap
-                       " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Robocup
-                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
-                             class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                             <path fill="currentColor"
-                                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
-                             </path>
-                          </svg>
-                       </button>
-                       <ul class="
-                         dropdown-menu
-                         min-w-max
-                         absolute
-                         hidden
-                         bg-white
-                         text-base
-                         z-50
-                         float-left
-                         py-2
-                         list-none
-                         text-left
-                         rounded-lg
-                         shadow-lg
-                         mt-1
-                         hidden
-                         m-0
-                         bg-clip-padding
-                         border-none
-                       " aria-labelledby="dropdownMenuButton1">
-                          <li>
-                             <a class="
-                             dropdown-item
-                             text-sm
-                             py-2
-                             px-4
-                             font-normal
-                             block
-                             w-full
-                             whitespace-nowrap
-                             bg-transparent
-                             text-gray-700
-                             hover:bg-gray-100
-                           " href="#">Robocup 2022</a>
-                          </li>
-                         
-                       </ul>
-                    </div>
-                 </div>
-              </div>
-              <a class="mr-5 hover:text-gray-900" href="#divisions">Divisions</a>
-              <a class="mr-5 hover:text-gray-900" href="#team">Out Team</a>
-              <a class="mr-5 hover:text-gray-900" href="#archievement">Archievement</a>
-           </nav>
-  
-           <button
-              class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"
-              onclick="location.href='mailto:ersowteampens@gmail.com';">Contact
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                 class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                 <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-           </button>
-        </div>
-     </header>
+   <header class="text-gray-700 body-font border-b border-gray-200">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/" target="_blank">
+            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-black text-slate-500">
+               <img src="logo.png" alt="" width="40" height="40">
+            </div>
+
+            <span class="ml-3 text-xl">ERSOW</span>
+         </a>
+         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <div class="flex justify-center">
+               <div>
+                  <div class="dropdown relative">
+                     <button class="
+                           dropdown-toggle
+                           px-6
+                           py-2.5
+                           text-black
+                           
+                           leading-tight
+   
+                           rounded
+                           focus:bg-blue-700
+                           active:bg-blue-800 
+                           transition
+                           duration-150
+                           ease-in-out
+                           flex
+                           items-center
+                           whitespace-nowrap
+                        " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Robocup
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                           class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                           <path fill="currentColor"
+                              d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                           </path>
+                        </svg>
+                     </button>
+                     <ul class="
+                           dropdown-menu
+                           min-w-max
+                           absolute
+                           hidden
+                           bg-white
+                           text-base
+                           z-50
+                           float-left
+                           py-2
+                           list-none
+                           text-left
+                           rounded-lg
+                           shadow-lg
+                           mt-1
+                           hidden
+                           m-0
+                           bg-clip-padding
+                           border-none
+                        " aria-labelledby="dropdownMenuButton1">
+                        <li>
+                           <a class="
+                              dropdown-item
+                              text-sm
+                              py-2
+                              px-4
+                              font-normal
+                              block
+                              w-full
+                              whitespace-nowrap
+                              bg-transparent
+                              text-gray-700
+                              hover:bg-gray-100
+                              " href="#">Robocup 2022</a>
+                        </li>
+
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <a class="mr-5 hover:text-gray-900" href="#divisions">Divisions</a>
+            <a class="mr-5 hover:text-gray-900" href="#team">Out Team</a>
+            <a class="mr-5 hover:text-gray-900" href="#archievement">Archievement</a>
+         </nav>
+
+         <button
+            class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"
+            onclick="location.href='mailto:ersowteampens@gmail.com';">Contact
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+               <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+         </button>
+      </div>
+   </header>
+   <div class="w-3/4 bg-slate-600 rounded-lg p-16 shadow-lg mb-20 mx-auto mt-8">
+      <div class="flex flex-col justify-center items-center">
+         <h2 class="text-4xl font-bold text-white text-center mb-6">Robocup 2022</h2>
+         <!-- <h5 class="text-2xl font-bold text-gray-100 text-center">Join now and get free cookies!</h5> -->
+         <div class="flex overflow-auto -mx-4 sm:mx-0">
+            <ul class="flex-none inline-grid gap-x-2 px-4 sm:px-0 xl:gap-x-6 text-white"
+               style="grid-template-columns:repeat(3, minmax(6rem, 1fr))">
+
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="w-3/4 mx-auto">
+      <div class="text-gray-900 font-bold text-xl mb-2">Team Description Paper</div>
+      <p class="text-sm">
+         This team description paper describes the recent developments of ERSOW MSL robots. The 2022 Team
+         Description Paper can be found in the link below.
+      </p>
+      <a
+         class="inline-flex text-white bg-slate-700 border-0 py-2 px-6 focus:outline-none hover:bg-slate-900 rounded text-md my-5" href="https://drive.google.com/file/d/1hmbEsEZZbe8A0XbKLu-s932gSm0dTk3v/view?usp=sharing">Download
+         TDP</a>
+
+      <div class="text-gray-900 font-bold text-xl mb-2">Publications</div>
+
+      <div id="accordion-collapse" data-accordion="collapse">
+         <h2 id="accordion-collapse-heading-1">
+            <button type="button"
+               class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+               data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+               aria-controls="accordion-collapse-body-1">
+               <span>1. Implementation of Feedforward and Feedback Control for Active Handling and Dribbling System in MSL Robot Soccer
+               </span>
+               <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd"></path>
+               </svg>
+            </button>
+         </h2>
+         <div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+               <p class="text-gray-500 dark:text-gray-400"> <a
+                     href="http://insightsociety.org/ojaseit/index.php/ijaseit/article/view/8373"
+                     class="text-blue-600 dark:text-blue-500 hover:underline">http://insightsociety.org/ojaseit/index.php/ijaseit/article/view/8373</a> </p>
+            </div>
+         </div>
+         <h2 id="accordion-collapse-heading-2">
+            <button type="button"
+               class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+               data-accordion-target="#accordion-collapse-body-2" aria-expanded="true"
+               aria-controls="accordion-collapse-body-2">
+               <span>2. Ball Detection Under Variety Lighting using Omnidirectional Camera
+               </span>
+               <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd"></path>
+               </svg>
+            </button>
+         </h2>
+         <div id="accordion-collapse-body-2" aria-labelledby="accordion-collapse-heading-2">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+               <p class="text-gray-500 dark:text-gray-400"> <a
+                     href="https://ieeexplore.ieee.org/abstract/document/8901617"
+                     class="text-blue-600 dark:text-blue-500 hover:underline">https://ieeexplore.ieee.org/abstract/document/8901617</a> </p>
+            </div>
+         </div>
+
+         <h2 id="accordion-collapse-heading-3">
+            <button type="button"
+               class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+               data-accordion-target="#accordion-collapse-body-3" aria-expanded="true"
+               aria-controls="accordion-collapse-body-3">
+               <span>3. Pose Estimation on Soccer Robot using Data Fusion from Encoders, Inertial Sensor, and Image Data
+               </span>
+               <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd"></path>
+               </svg>
+            </button>
+         </h2>
+         <div id="accordion-collapse-body-3" aria-labelledby="accordion-collapse-heading-3">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+               <p class="text-gray-500 dark:text-gray-400"> <a
+                     href="https://ieeexplore.ieee.org/document/8901578"
+                     class="text-blue-600 dark:text-blue-500 hover:underline">https://ieeexplore.ieee.org/document/8901578</a> </p>
+            </div>
+         </div>
+
+         <h2 id="accordion-collapse-heading-4">
+            <button type="button"
+               class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+               data-accordion-target="#accordion-collapse-body-4" aria-expanded="true"
+               aria-controls="accordion-collapse-body-4">
+               <span>4. A New Kicker System of Wheeled Soccer Robot ERSOW Using Fuzzy Logic Method
+               </span>
+               <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd"></path>
+               </svg>
+            </button>
+         </h2>
+         <div id="accordion-collapse-body-4" aria-labelledby="accordion-collapse-heading-4">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+               <p class="text-gray-500 dark:text-gray-400"> <a
+                     href="https://ieeexplore.ieee.org/document/9231882"
+                     class="text-blue-600 dark:text-blue-500 hover:underline">https://ieeexplore.ieee.org/document/9231882</a> </p>
+            </div>
+         </div>
+
+         <h2 id="accordion-collapse-heading-5">
+            <button type="button"
+               class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+               data-accordion-target="#accordion-collapse-body-5" aria-expanded="true"
+               aria-controls="accordion-collapse-body-5">
+               <span>5. Dynamic Obstacle Avoidance on Middle Size League Robot Soccer ERSOW Using Subtargets
+               </span>
+               <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd"></path>
+               </svg>
+            </button>
+         </h2>
+         <div id="accordion-collapse-body-5" aria-labelledby="accordion-collapse-heading-5">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+               <p class="text-gray-500 dark:text-gray-400"> <a
+                     href="https://ieeexplore.ieee.org/document/9557598"
+                     class="text-blue-600 dark:text-blue-500 hover:underline">https://ieeexplore.ieee.org/document/9557598</a> </p>
+            </div>
+         </div>
+
+         <h2 id="accordion-collapse-heading-6">
+            <button type="button"
+               class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+               data-accordion-target="#accordion-collapse-body-6" aria-expanded="true"
+               aria-controls="accordion-collapse-body-6">
+               <span>6. BImproving the speed of ball detection process and obstacle detection process in ERSOW robot using omnidirectional vision based on ROS
+               </span>
+               <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                     clip-rule="evenodd"></path>
+               </svg>
+            </button>
+         </h2>
+         <div id="accordion-collapse-body-6" aria-labelledby="accordion-collapse-heading-6">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+               <p class="text-gray-500 dark:text-gray-400"> <a
+                     href="https://www.researchgate.net/publication/352775756_Improving_the_speed_of_ball_detection_process_and_obstacle_detection_process_in_ERSOW_robot_using_omnidirectional_vision_based_on_ROS"
+                     class="text-blue-600 dark:text-blue-500 hover:underline">https://www.researchgate.net/publication/352775756_Improving_the_speed_of_ball_detection_process_and_obstacle_detection_process_in_ERSOW_robot_using_omnidirectional_vision_based_on_ROS</a> </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="text-gray-900 font-bold text-xl mb-2 mt-10">Archievement</div>
+
+      <p class="text-sm mb-3">List of results and awards obtained by the team in the last 3 years.</p>
+
+      <ul>
+         <li><strong>2021</strong></li>
+         <ul class="ml-5 mb-2">
+             <li>1st Place Wheeled KRSBI (Indonesian Football Robot Contest) Region II</li>
+             <li>Best Design of The Regional Level II Wheeled KRSBI</li>
+             <li>3rd Place National Wheeled KRSBI</li>
+         </ul>
+         <li><strong>2020</strong></li>
+         <ul class="ml-5 mb-2">
+             <li>Consolation Prize Winner Wheeled KRSBI Region II</li>
+             <li>2nd Place National Wheeled KRSBI</li>
+             <li>3rd Place National Wheeled KRSBI</li>
+         </ul>
+         <li><strong>2019</strong></li>
+         <ul class="ml-5 mb-2">
+             <li>2nd Place Wheeled KRSBI Region IV</li>
+             <li>Quarter Finalist in Kontes Robot Indonesia Nasional</li>
+         </ul>
+     </ul>
+
+      <div class="text-gray-900 font-bold text-xl mb-2 mt-10">Qualification Video</div>
+      <p class="text-sm mb-3">The following video showcases the ERSOW robots abilities in a minute.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/GjaZgfqJ4ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <div class="text-gray-900 font-bold text-xl mb-2 mt-10">List of MAC Address</div>
+      <p class="text-sm mb-5">The following MAC addresses are subject to change.</p>
+
+      <a
+      class="inline-flex text-white bg-slate-700 border-0 py-2 px-6 focus:outline-none hover:bg-slate-900 rounded text-md my-5" href="https://drive.google.com/file/d/1NzgDP9WWP_mcrFQA62D3texl7WopVyKs/view?usp=sharing">Download
+      MAC Address</a>
+
+   </div>
+
+   <footer class="text-gray-700 body-font">
+      <div class="bg-gray-200">
+         <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class="text-gray-500 text-sm text-center sm:text-left">© 2022 ERSOW Team
+            </p>
+            <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
+               <a class="text-gray-500" href="https://facebook.com/ersowpens">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     class="w-5 h-5" viewBox="0 0 24 24">
+                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+               </a>
+               <a class="ml-3 text-gray-500" href="https://twitter.com/ersowpens">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     class="w-5 h-5" viewBox="0 0 24 24">
+                     <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                     </path>
+                  </svg>
+               </a>
+               <a class="ml-3 text-gray-500" href="https://instagram.com/ersowpens">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     class="w-5 h-5" viewBox="0 0 24 24">
+                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                     <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+               </a>
+               <a class="ml-3 text-gray-500" href="https://linkedin.com/company/eepis-robot-soccer-on-wheels-ersow">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                     <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                     <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+               </a>
+            </span>
+         </div>
+      </div>
+   </footer>
+
+   <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
 </body>
+
 </html>
